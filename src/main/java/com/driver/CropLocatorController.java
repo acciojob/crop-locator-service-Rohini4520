@@ -24,7 +24,7 @@ public class CropLocatorController {
 	    public ResponseEntity<String> registerCrop(@RequestBody Crop crop) {
 	    	// your code goes here
 			cropService.addCrop(crop);
-	        return new ResponseEntity<>("Crop registered successfully",HttpStatus.CREATED);
+	        return new ResponseEntity<>("Crop registered successfully!",HttpStatus.CREATED);
 	    }
 
 	    @GetMapping("/locate")
