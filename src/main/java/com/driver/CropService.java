@@ -17,7 +17,7 @@ public class CropService {
 	    public Crop findCropByLocation(double latitude, double longitude) {
 	    	// your code goes here
 			for(Crop crop: crops){
-				if(crop.getLatitude() == latitude && crop.getLongitude() == longitude){
+				if(Double.compare(crop.getLatitude(), latitude) == 0 && Double.compare(crop.getLongitude(), longitude) == 0) {
 					return crop;
 				}
 			}
