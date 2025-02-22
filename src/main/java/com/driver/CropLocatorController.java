@@ -30,8 +30,11 @@ public class CropLocatorController {
 	    @GetMapping("/locate")
 	    public ResponseEntity<Crop> getCropByLocation(@RequestParam double latitude, @RequestParam double longitude) {
 	    	// your code goes here
-
-	    	return null;
-	    }
+			Crop crop = cropService.findCropByLocation(latitude, longitude);
+			if (crop != null) {
+				return new ResponseEntity<>(crop, HttpStatus.OK);
+			}
+			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+		}
 
 }
