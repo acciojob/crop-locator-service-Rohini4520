@@ -11,6 +11,9 @@ public class Crop {
 
     public Crop(String name, double latitude, double longitude) {
     	// your code goes here
+        this.name = name;
+        this.latitude = latitude;
+        this.longitude= longitude;
     }
 
     public String getName() {
@@ -20,6 +23,7 @@ public class Crop {
 
     public void setName(String name) {
     	// your code goes here
+        this.name = name;
     }
 
     public double getLatitude() {
@@ -29,6 +33,7 @@ public class Crop {
 
     public void setLatitude(double latitude) {
     	// your code goes here
+        this.latitude = latitude;
     }
 
     public double getLongitude() {
@@ -38,6 +43,7 @@ public class Crop {
 
     public void setLongitude(double longitude) {
     	// your code goes here
+        this.longitude = longitude;
     }
 
     @Override
